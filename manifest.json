@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Video Speed",
+  "version": "0.1.0",
+  "description": "Control Video Speed on Websites",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.netflix.com/watch/*",
+        "*://*.youtube.com/watch?*"
+      ],
+      "js": [
+        "./content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "24": "icon24.png",
+    "32": "icon32.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "./popup/index.html",
+    "default_title": "Video Speed",
+    "default_icon": {
+      "16": "icon16.png",
+      "24": "icon24.png",
+      "32": "icon32.png",
+      "128": "icon128.png"
+    }
+  }
+}
